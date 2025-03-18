@@ -1,0 +1,89 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "bc",
+						"type": "bytes"
+					},
+					{
+						"internalType": "string",
+						"name": "sm",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes16",
+						"name": "b",
+						"type": "bytes16"
+					}
+				],
+				"name": "f",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "len",
+						"type": "uint256"
+					}
+				],
+				"name": "m",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "z",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"test/test.sol": "C"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"test/test.sol": {
+			"keccak256": "0x549af1e5fe1ea68deefd803a72074611e58ff15c0aa107e359abadc616d0d598",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ca1e55b58ce0335f613704e647d814defa0387db3b9b751045c8d9b9941b127d",
+				"dweb:/ipfs/QmeAwvGCGv7NNMKPaZujoz5C1d9XZ1ey6dCRQft3Wb7xHj"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "buySomething",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "response",
+						"type": "uint256"
+					}
+				],
+				"name": "oracleResponse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"test/test.sol": "OracleUser"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"test/test.sol": {
+			"keccak256": "0x7bb063a613e7579ffd5e320e82ed8ff38364a67654526b3712ee26925c3bfa67",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://316cd0e07541842ccced11992c2af1fa8e3c3e8d8257559c465d618b9678bc6a",
+				"dweb:/ipfs/QmYMSBKt3eP5JhJLE9F9eaF9hH8DRF1TKSnX5tRm3mbEBU"
+			]
+		}
+	},
+	"version": 1
+}
