@@ -1,0 +1,69 @@
+{
+	"id": "fbd877b7d239bbd08a62e0702925d529",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.28",
+	"solcLongVersion": "0.8.28+commit.7893614a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"test/test1.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n// contract DeleteExample {\r\n//     uint data;\r\n//     uint[] dataArray;\r\n\r\n//     function f() public {\r\n//         // uint x = data;\r\n//         // delete x;\r\n//         // delete data;\r\n//         // uint[] storage y = dataArray;\r\n//         // delete dataArray;\r\n//         // assert(y.length == 0);\r\n\r\n//         // uint8 y;\r\n//         // uint16 z;\r\n//         // uint32 x = y + z;\r\n//         // delete x;\r\n//         // delete data;\r\n\r\n//         // int y = -3;\r\n//         // uint x = uint(y);\r\n\r\n//         // uint32 a = 0x12345678;\r\n//         // uint16 b = uint16(a);\r\n        \r\n//         // uint16 a = 0x1234;\r\n//         // uint32 b = uint32(a);\r\n//         // assert(a == b);\r\n\r\n\r\n//     }\r\n// }\r\n\r\n// contract C{\r\n\r\n// //    bytes s = \"abcdefgh\";\r\n// //    function f(bytes calldata c,bytes memory m) public view returns (bytes16, bytes3){\r\n// //        require(c.length == 16,\"\");\r\n// //        bytes16 b = bytes16(m);\r\n// //    }\r\n\r\n// //   uint8 a = 12;\r\n// //   uint32 b = 1234;\r\n// //   uint16 c = 0x1234;\r\n\r\n//      mapping(uint => uint) data;\r\n//      function f() public {\r\n//         set({key:2,value:3});\r\n//      }\r\n\r\n//      function set(uint key, uint value) public {\r\n//          data[key] = value;  \r\n//      }\r\n\r\n// }\r\n\r\n// contract D {\r\n//     uint public x;\r\n//     constructor(uint a) payable {\r\n//         x = a;\r\n//     }\r\n// }\r\n\r\n// contract C {\r\n//     D d = new D(4);\r\n//     function createD(uint arg) public {\r\n//         D newD = new D(arg);\r\n//         newD.x()\r\n//     }\r\n// }\r\n\r\n// contract C {\r\n//     uint index;\r\n//     function f() public pure returns (uint,bool,uint){\r\n//         return (7,true,2);\r\n//     }\r\n\r\n//     function g() public {\r\n//         (uint x,,uint y) = f();\r\n//         (x,y) = (y,x);\r\n//         (index, ,) = f();\r\n//     }\r\n// }\r\n\r\n// contract C {\r\n    \r\n//     uint private data;\r\n\r\n//     function f(uint a) private pure returns (uint b) { return  a + 1; }\r\n\r\n//     function setData(uint a) public { data = a;}\r\n\r\n//     function getData() public  view returns (uint) { \r\n//         return data;\r\n//     }  \r\n\r\n//     function compute(uint a, uint b) internal pure returns (uint) {\r\n//         return  a + b;\r\n//     }\r\n// }\r\n\r\n// contract D {\r\n//     function readData() public {\r\n//         C c = new C();\r\n//         uint local = c.f(7);\r\n//         c.setData(3);\r\n//         local = c.getData();\r\n//         local = c.compute(3,5);\r\n//     }\r\n// }\r\n\r\n// contract E is C {\r\n//     function g() public {\r\n//           C c = new C();\r\n//           uint val = compute(3, 5);\r\n//     }\r\n// }\r\n\r\n// contract owned {\r\n\r\n//     address payable owner;\r\n\r\n//     constructor() {\r\n//         owner = payable (msg.sender);\r\n//     }\r\n\r\n//     modifier onlyOwner {\r\n//         require(msg.sender == owner,\"only owner can call this function.\");\r\n//         _;\r\n//     }\r\n\r\n// }\r\n\r\n// contract priced {\r\n//     modifier costs(uint price){\r\n//         if(msg.value >= price){\r\n//             _;\r\n//         }\r\n//     }\r\n// }\r\n\r\n// contract Register is priced, owned {\r\n//     mapping (address => bool) registeredAddresses;\r\n//     uint price;\r\n//     constructor(uint initialPrice) {\r\n//         price = initialPrice;\r\n//     }\r\n\r\n//     function register() public payable co\r\n// }\r\n\r\n\r\n// uint constant X = 32 ** 22 + 8;\r\n\r\n// contract C {\r\n//     string constant TEXT = \"abc\";\r\n//     bytes32 constant MY_HASH = keccak256(\"abc\");\r\n//     uint immutable decimals = 18;\r\n//     uint immutable maxBalance;\r\n//     address immutable owner = msg.sender;\r\n\r\n//     constructor(uint decimals_, address ref){\r\n//         if(decimals_ != 0){\r\n//             decimals = decimals_;\r\n//         }\r\n//         maxBalance = ref.balance;\r\n//     }\r\n\r\n//     function isBalanceTooHigh(address other) public view returns(bool) {\r\n//         return other.balance > maxBalance;\r\n//     }\r\n\r\n// }\r\n\r\n// contract Simple {\r\n//     function arithmetic(uint a, uint b) public pure returns (uint sum, uint product){\r\n//         return (a+b, a*b)\r\n//     }\r\n// }\r\n\r\n// contract Sink {\r\n//     event Received(address, uint);\r\n//     receive() external payable {\r\n//         emit Received(msg.sender, msg.value);\r\n//      }\r\n// }\r\n\r\n// contract Test {\r\n//     uint x;\r\n//     fallback() external  {\r\n//         x = 1;\r\n//     }\r\n// }\r\n\r\n// contract TestPayable {\r\n//     uint x;\r\n//     uint y;\r\n\r\n//     fallback() external payable {\r\n//         x = 1;\r\n//         y = msg.value;\r\n//     }\r\n\r\n\r\n//     receive() external payable {\r\n//         x = 2;\r\n//         y = msg.value;\r\n//      }\r\n// }\r\n\r\n// contract Caller {\r\n\r\n//     function callTest(Test test) public returns (bool) {\r\n//         (bool success,) = address(test).call(abi.encodeWithSignature(\"nonExistingFunction()\"));\r\n//         require(success);\r\n\r\n//         address payable testPayable = payable(address(test));\r\n//         return testPayable.send(2 ether);\r\n//     }\r\n\r\n\r\n//     function callTestPayable(TestPayable test) public returns (bool) {\r\n//         (bool success,) = address(test).call(abi.encodeWithSignature(\"nonExistingFunction()\"));\r\n//         require(success);\r\n//         (success,) = address(test).call{value:1}(abi.encodeWithSignature(\"nonExistingFunction()\"));\r\n//         require(success);\r\n\r\n//         (success,) = address(test).call{value: 2 ether}(\"\");\r\n        \r\n//         require(success);\r\n//         return true;\r\n//     }\r\n// }\r\n\r\n\r\n// error InsufficientBalance(uint256 available, uint256 required);\r\n\r\n// contract TestToken {\r\n   \r\n//     mapping (address => uint) balance;\r\n   \r\n//     function transferWithRevertError(address to, uint256 amount) public {\r\n//         if(amount > balance[msg.sender]){\r\n//             revert InsufficientBalance({\r\n//                available: balance[msg.sender],\r\n//                required:amount\r\n//             }); \r\n//         }\r\n//         balance[msg.sender] -= amount;\r\n//         balance[to] += amount;\r\n//     }\r\n\r\n//     function transferWithRequireError(address to, uint256 amount) public {\r\n//         require(amount <= balance[msg.sender],InsufficientBalance(balance[msg.sender],amount));\r\n//         balance[msg.sender] -= amount;\r\n//         balance[to] += amount;\r\n//     }\r\n   \r\n// }"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"sources": {
+			"test/test1.sol": {
+				"ast": {
+					"absolutePath": "test/test1.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:23:0"
+						}
+					],
+					"src": "33:6200:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

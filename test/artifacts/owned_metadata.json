@@ -7,10 +7,8 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "f",
-				"outputs": [],
-				"stateMutability": "pure",
-				"type": "function"
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			}
 		],
 		"devdoc": {
@@ -26,7 +24,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"test/test3.sol": "C"
+			"test/test1.sol": "owned"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -40,12 +38,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"test/test3.sol": {
-			"keccak256": "0x9f5851aceb1d4bfa48b13b972d0c1048ef3b4e3950135842952bae3a28b42806",
+		"test/test1.sol": {
+			"keccak256": "0xf73698228b717b45a2a8a334c65fe3854a1e77552193d466d87d5e2417e42edb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://448aa83db05ea86dab1174435b4dacbd663e6308311cdcd04c0a674a49f9f498",
-				"dweb:/ipfs/QmSbksPMQNwxcpCjcnLbBPHHHwoURGVCayq9ejmZZJtJD7"
+				"bzz-raw://0389ca2e7ad7911dad44efc3e79841429052632b6122c913c1c7851bd030665f",
+				"dweb:/ipfs/QmahKg1ZrLHEq3oXCT25rC6h6mR4b45f6GqHxU1sKe6NVL"
 			]
 		}
 	},

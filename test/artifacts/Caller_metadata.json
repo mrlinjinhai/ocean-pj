@@ -1,0 +1,84 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract Test",
+						"name": "test",
+						"type": "address"
+					}
+				],
+				"name": "callTest",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract TestPayable",
+						"name": "test",
+						"type": "address"
+					}
+				],
+				"name": "callTestPayable",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"test/test1.sol": "Caller"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"test/test1.sol": {
+			"keccak256": "0x54acd58d0f36ad9ede967b2f67fcc2fecd5a40f5b71aeab394058cf5f67fc132",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a9a5f88ad20c9f76d3b13554d7c16af5b04dc5e2f3b7800cc6800e313ddccce6",
+				"dweb:/ipfs/QmXcSWLXurmW9Pjm2M9F4FTc2R1r1VCrZ4KodFyU76DgJb"
+			]
+		}
+	},
+	"version": 1
+}

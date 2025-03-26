@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "name",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "Emitted",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "emitEvent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"test/test2.sol": "Named"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"test/test2.sol": {
+			"keccak256": "0x9d8dacd3c694c8f49d05333be4ff8287564ab218d7be777d7973a2cc35f644a7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://47bce249dd25e37054ab9bc1dd78c21dca69dc2ea773f51acd0fb74dcde1263d",
+				"dweb:/ipfs/QmPwsWE64hqfxvA51bWthdGpfef4xDXvVxezDDuLuv4QEn"
+			]
+		}
+	},
+	"version": 1
+}

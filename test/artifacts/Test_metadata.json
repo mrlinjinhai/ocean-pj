@@ -6,11 +6,8 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "f",
-				"outputs": [],
-				"stateMutability": "pure",
-				"type": "function"
+				"stateMutability": "nonpayable",
+				"type": "fallback"
 			}
 		],
 		"devdoc": {
@@ -26,7 +23,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"test/test3.sol": "C"
+			"test/test1.sol": "Test"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -40,12 +37,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"test/test3.sol": {
-			"keccak256": "0x9f5851aceb1d4bfa48b13b972d0c1048ef3b4e3950135842952bae3a28b42806",
+		"test/test1.sol": {
+			"keccak256": "0x54acd58d0f36ad9ede967b2f67fcc2fecd5a40f5b71aeab394058cf5f67fc132",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://448aa83db05ea86dab1174435b4dacbd663e6308311cdcd04c0a674a49f9f498",
-				"dweb:/ipfs/QmSbksPMQNwxcpCjcnLbBPHHHwoURGVCayq9ejmZZJtJD7"
+				"bzz-raw://a9a5f88ad20c9f76d3b13554d7c16af5b04dc5e2f3b7800cc6800e313ddccce6",
+				"dweb:/ipfs/QmXcSWLXurmW9Pjm2M9F4FTc2R1r1VCrZ4KodFyU76DgJb"
 			]
 		}
 	},

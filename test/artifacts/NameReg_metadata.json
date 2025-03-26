@@ -6,10 +6,23 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "f",
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "name",
+						"type": "bytes32"
+					}
+				],
+				"name": "register",
 				"outputs": [],
-				"stateMutability": "pure",
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unregister",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -26,7 +39,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"test/test3.sol": "C"
+			"test/test2.sol": "NameReg"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -40,12 +53,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"test/test3.sol": {
-			"keccak256": "0x9f5851aceb1d4bfa48b13b972d0c1048ef3b4e3950135842952bae3a28b42806",
+		"test/test2.sol": {
+			"keccak256": "0x9d8dacd3c694c8f49d05333be4ff8287564ab218d7be777d7973a2cc35f644a7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://448aa83db05ea86dab1174435b4dacbd663e6308311cdcd04c0a674a49f9f498",
-				"dweb:/ipfs/QmSbksPMQNwxcpCjcnLbBPHHHwoURGVCayq9ejmZZJtJD7"
+				"bzz-raw://47bce249dd25e37054ab9bc1dd78c21dca69dc2ea773f51acd0fb74dcde1263d",
+				"dweb:/ipfs/QmPwsWE64hqfxvA51bWthdGpfef4xDXvVxezDDuLuv4QEn"
 			]
 		}
 	},
