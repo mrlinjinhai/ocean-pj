@@ -216,6 +216,29 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "values",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "bool[]",
+						"name": "fakes",
+						"type": "bool[]"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "secrets",
+						"type": "bytes32[]"
+					}
+				],
+				"name": "reveal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "revealEnd",
 				"outputs": [
@@ -261,6 +284,13 @@
 				],
 				"stateMutability": "pure",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -300,6 +330,12 @@
 				},
 				"bid(bytes32)": {
 					"notice": "以 `blindedBid` = keccak256(abi.encodePacked(value, fake, secret)) 的方式提交一个盲出价。 发送的以太币仅在出价在揭示阶段被正确揭示时才会退还。 如果与出价一起发送的以太币至少为 \"value\" 且 \"fake\" 不为真，则出价有效。 将 \"fake\" 设置为真并发送不准确的金额是隐藏真实出价的方式，但仍然满足所需的存款。 相同地址可以提交多个出价。"
+				},
+				"reveal(uint256[],bool[],bytes32[])": {
+					"notice": "揭示盲出价。 将获得所有正确盲出的无效出价的退款，以及除了最高出价之外的所有出价。"
+				},
+				"withdraw()": {
+					"notice": "提取被超出出价的出价。"
 				}
 			},
 			"version": 1
@@ -330,11 +366,11 @@
 			]
 		},
 		"test/BlindAuction.sol": {
-			"keccak256": "0xafd0a2062b3bb827134c1671869c782d08b5fb8ef952609bafd70b9e47cc6624",
+			"keccak256": "0x7cbfb033d747983be2ffc84db16b5ed3a5c56962975a2ba006a2d49a46ae86c8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7e5a5c2eae1f11cc955a03f27107c843b863a86c332b6bf02d9e2350a9c9bb68",
-				"dweb:/ipfs/QmRRMUccjqMmFXtqsnevCUjFVuqXktWaPt1qr5tFrNApz1"
+				"bzz-raw://69f668ff4ea5c610b3f0c845e72c96d3befed98dbce5fb7edf916f066ca70256",
+				"dweb:/ipfs/Qma8waRBhBD7Hgco4L7VpKZkJ6b1bA5rdP5HZJRFKqQhQP"
 			]
 		}
 	},
