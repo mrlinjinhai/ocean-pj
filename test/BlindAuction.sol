@@ -47,11 +47,24 @@ contract BlindAuction {
          console.log("constructor",biddingEnd,revealEnd);
     }
 
+    /// 以 `blindedBid` = keccak256(abi.encodePacked(value, fake, secret)) 的方式提交一个盲出价。
+    /// 发送的以太币仅在出价在揭示阶段被正确揭示时才会退还。
+    /// 如果与出价一起发送的以太币至少为 "value" 且 "fake" 不为真，则出价有效。
+    /// 将 "fake" 设置为真并发送不准确的金额是隐藏真实出价的方式，但仍然满足所需的存款。
+    /// 相同地址可以提交多个出价。
     function bid(bytes32 blindedBid) external payable onlyBefore(biddingEnd){
            bids[msg.sender].push(Bid({
               blindedBid:blindedBid,
               deposit:msg.value
            }));
+    }
+
+    /// 结束拍卖并将最高出价发送给受益人。 
+    function auctionEnd() external onlyAfter(revealEnd) {
+        if(ended) revert AuctionEndAlreadyCalled();
+        emit AuctionEnded(highestBidder, highestBid);
+        ended = true;
+        beneficiary.transfer(highestBid);
     }
 
     /**
